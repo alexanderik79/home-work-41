@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Autos from './components/Autos';
 import AutoSearchBar from './components/AutoSearchBar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
       <h1>Auto Catalogue</h1>
       <AutoSearchBar onSearch={setAutoId}/>
       <Autos autoId={autoId} />
+      <ToastContainer />
     </div>
   );
 }

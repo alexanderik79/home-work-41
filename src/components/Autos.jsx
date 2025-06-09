@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import api from '../axiosConfig';
+
 const Autos = ({ autoId }) => {
   const apiKey = '0190ed4a-9d93-4b55-ac50-96123dbc39e6';
   const company = 'AutoPlus';
@@ -11,18 +13,10 @@ const Autos = ({ autoId }) => {
 
   useEffect(() => {
 
-    axios.get(`https://car-dealer-app.botdepo.shop/api/products/product/${autoId}/${company}`,
-        {
-            headers: {
-                'X-API-Key': apiKey
-            }
-        }
-    )
+    api.get(`/products/product/${autoId}/${company}`)
+
       .then(response => {
         setAuto(response.data); 
-      })
-      .catch(error => {
-        console.error('Ошибка при получении данных:', error);
       });
   }, [autoId]);
 
