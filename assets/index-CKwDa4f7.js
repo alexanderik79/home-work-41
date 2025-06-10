@@ -53,7 +53,7 @@ Error generating stack: `+a.message+`
   border-radius: 12px;
   max-width: 500px;
   margin: 20px auto;
-  background-color: #fafafa;
+  background-color:rgb(0, 0, 0);
 `,Ng=vu.img`
   width: 100%;
   max-width: 300px;
