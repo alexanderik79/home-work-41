@@ -17,25 +17,4 @@ api.interceptors.request.use(
 );
 
 
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response) {
-      const status = error.response.status;
-
-      if (status === 401) {
-        toast.error('Session is over.');
-      }
-
-      if (status === 404) {
-        toast.warn('Car not found.');
-      }
-    } else {
-      toast.error('Connection error.');
-    }
-
-    return Promise.reject(error);
-  }
-);
-
 export default api;

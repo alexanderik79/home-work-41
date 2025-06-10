@@ -13,7 +13,7 @@ const AutoSearchBar = ( {onSearch} ) => {
 
     <>
     <div>
-        <input type="number" value={autoId} max={25} min={1} onChange={e => setAutoId(e.target.value)}
+        <input type="number" value={autoId} min={1} onChange={e => setAutoId(e.target.value)}
 />
         <button onClick={handleSearch}>Search</button>
     </div>
