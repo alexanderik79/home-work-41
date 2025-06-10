@@ -56,7 +56,6 @@ Error generating stack: `+a.message+`
   background-color:rgb(0, 0, 0);
 `,Ng=vu.img`
   width: 100%;
-  max-width: 300px;
   border-radius: 8px;
 `,Ug=vu.h2`
   margin-bottom: 10px;
