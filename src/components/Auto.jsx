@@ -24,7 +24,7 @@ const Autos = ({ autoId }) => {
           render: 'Done!',
           type: 'success',
           isLoading: false,
-          autoClose: 2000,
+          autoClose: 1500,
              });
         })
         .catch(error => {
