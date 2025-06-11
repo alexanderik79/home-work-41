@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Auto from './components/Auto';
 import AutoSearchBar from './components/AutoSearchBar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useAutoSearch from './hooks/useAutoSearch';
 
 function App() {
-
-  const[autoId, setAutoId] = useState(1)
+  const { autoId, setAutoId, loading, setLoading } = useAutoSearch();
 
   return (
     <div>
       <h1>Auto Catalogue</h1>
-      <AutoSearchBar onSearch={setAutoId}/>
-      <Auto autoId={autoId} />
+      <AutoSearchBar onSearch={setAutoId} loading={loading} />
+      <Auto autoId={autoId} setLoading={setLoading} />
       <ToastContainer />
     </div>
   );
