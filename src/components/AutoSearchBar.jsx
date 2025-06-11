@@ -9,15 +9,17 @@ const AutoSearchBar = ( {onSearch} ) => {
         onSearch(autoId)
     };
 
+  const handleInputChange = (e) => {
+      setAutoId(e.target.value)  
+  } ; 
+
   return (
 
     <>
     <div>
-        <input type="number" value={autoId} min={1} onChange={e => setAutoId(e.target.value)}
-/>
+        <input type="number" value={autoId} min={1} onChange={handleInputChange}/>
         <button onClick={handleSearch}>Search</button>
     </div>
-     
     </>
   );
 };
