@@ -6,13 +6,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import useAutoSearch from './hooks/useAutoSearch';
 
 function App() {
-  const { autoId, setAutoId, loading, setLoading } = useAutoSearch();
+  const { autoId, setAutoId, auto, loading } = useAutoSearch();
 
   return (
     <div>
       <h1>Auto Catalogue</h1>
       <AutoSearchBar onSearch={setAutoId} loading={loading} />
-      <Auto autoId={autoId} setLoading={setLoading} />
+      <Auto auto={auto} />
       <ToastContainer />
     </div>
   );
